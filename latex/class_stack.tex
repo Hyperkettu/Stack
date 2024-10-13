@@ -1,0 +1,302 @@
+\doxysection{Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_stack}{}\label{class_stack}\index{Stack$<$ T $>$@{Stack$<$ T $>$}}
+
+
+A template generic \doxylink{class_stack}{Stack} class with fixed capacity.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stack_a8ab60a7d5e45a47f60ed5d7f8d543339}{Stack}} (std\+::size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a stack with a fixed capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stack_a84ed303fcc02f090d439722515c341e6}{Stack}} (const \mbox{\hyperlink{class_stack}{Stack}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Creates a copy of the stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stack_a6b1bc67b20635bff882b114a4404885a}{Stack}} (\mbox{\hyperlink{class_stack}{Stack}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. Transfers ownership of the stack\textquotesingle{}s data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stack}{Stack}} \& \mbox{\hyperlink{class_stack_ae97cf63b6401d8af940644fa735d9412}{operator=}} (const \mbox{\hyperlink{class_stack}{Stack}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. Copies data from another stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stack}{Stack}} \& \mbox{\hyperlink{class_stack_aedd72f2bc37dadc11d225985e5bbfbc0}{operator=}} (\mbox{\hyperlink{class_stack}{Stack}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. Moves data from another stack. \end{DoxyCompactList}\item 
+\Hypertarget{class_stack_a9e7a00875aefbdac560ab189b7bc61d1}\label{class_stack_a9e7a00875aefbdac560ab189b7bc61d1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Releases the allocated memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stack_a7b0f0506fd1cd7ec5756bb2b51ff908d}{push}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Pushes an element onto the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stack_af843299cf05e6fdb2487f4ff3b64e5c3}{push}} (T \&\&value)
+\begin{DoxyCompactList}\small\item\em Pushes an element onto the stack using move semantics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stack_a2723aec5c7e2611b97fcffeb7709de33}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Removes the top element from the stack. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_stack_a8e99bab8b8f969fe5e029934ac14408a}{top}} ()
+\begin{DoxyCompactList}\small\item\em Returns the top element of the stack. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_stack_acd57bc797300d4cbae9ea22368f428eb}{top}} () const
+\begin{DoxyCompactList}\small\item\em Returns the top element of the stack (const version). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stack_a01e885dfcc4ee3282ce581e178354310}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the stack is empty. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_stack_a8c9238bfb40990fe996c6f30d602f0ef}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current number of elements in the stack. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_stack_a1d32f43d9577a593fc3a32afc6906697}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fixed capacity of the stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Stack$<$ T $>$}
+A template generic \doxylink{class_stack}{Stack} class with fixed capacity. 
+
+The stack supports basic operations such as push, pop, and top, as well as copy and move of the stack.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the stack. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stack_a8ab60a7d5e45a47f60ed5d7f8d543339}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_stack_a8ab60a7d5e45a47f60ed5d7f8d543339} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\mbox{\hyperlink{class_stack}{\+::\+Stack}} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a stack with a fixed capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The maximum number of elements the stack can have. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stack_a84ed303fcc02f090d439722515c341e6}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_stack_a84ed303fcc02f090d439722515c341e6} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\mbox{\hyperlink{class_stack}{\+::\+Stack}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor. Creates a copy of the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The stack to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stack_a6b1bc67b20635bff882b114a4404885a}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_stack_a6b1bc67b20635bff882b114a4404885a} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\mbox{\hyperlink{class_stack}{\+::\+Stack}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. Transfers ownership of the stack\textquotesingle{}s data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The stack to move from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stack_a1d32f43d9577a593fc3a32afc6906697}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_stack_a1d32f43d9577a593fc3a32afc6906697} 
+template$<$typename T $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the fixed capacity of the stack. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the stack. 
+\end{DoxyReturn}
+\Hypertarget{class_stack_a8c9238bfb40990fe996c6f30d602f0ef}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{class_stack_a8c9238bfb40990fe996c6f30d602f0ef} 
+template$<$typename T $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the current number of elements in the stack. 
+
+\begin{DoxyReturn}{Returns}
+The size of the stack. 
+\end{DoxyReturn}
+\Hypertarget{class_stack_a01e885dfcc4ee3282ce581e178354310}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{class_stack_a01e885dfcc4ee3282ce581e178354310} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the stack is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the stack is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_stack_ae97cf63b6401d8af940644fa735d9412}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_stack_ae97cf63b6401d8af940644fa735d9412} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$ \& \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. Copies data from another stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The stack to copy from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the current stack after assignment. 
+\end{DoxyReturn}
+\Hypertarget{class_stack_aedd72f2bc37dadc11d225985e5bbfbc0}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_stack_aedd72f2bc37dadc11d225985e5bbfbc0} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$ \& \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator. Moves data from another stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The stack to move from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the current stack after assignment. 
+\end{DoxyReturn}
+\Hypertarget{class_stack_a2723aec5c7e2611b97fcffeb7709de33}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{class_stack_a2723aec5c7e2611b97fcffeb7709de33} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Removes the top element from the stack. 
+
+Throws an exception if the stack is empty.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the stack is empty. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_stack_a7b0f0506fd1cd7ec5756bb2b51ff908d}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!push@{push}}
+\index{push@{push}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_stack_a7b0f0506fd1cd7ec5756bb2b51ff908d} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Pushes an element onto the stack. 
+
+Throws an exception if the stack is full.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The element to push. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the stack is full. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_stack_af843299cf05e6fdb2487f4ff3b64e5c3}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!push@{push}}
+\index{push@{push}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_stack_af843299cf05e6fdb2487f4ff3b64e5c3} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T \&\&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Pushes an element onto the stack using move semantics. 
+
+Throws an exception if the stack is full.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The element to push. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the stack is full. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_stack_a8e99bab8b8f969fe5e029934ac14408a}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!top@{top}}
+\index{top@{top}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_stack_a8e99bab8b8f969fe5e029934ac14408a} 
+template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the top element of the stack. 
+
+Throws an exception if the stack is empty.
+
+\begin{DoxyReturn}{Returns}
+Reference to the top element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the stack is empty. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_stack_acd57bc797300d4cbae9ea22368f428eb}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!top@{top}}
+\index{top@{top}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_stack_acd57bc797300d4cbae9ea22368f428eb} 
+template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{class_stack}{Stack}}$<$ T $>$\+::top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the top element of the stack (const version). 
+
+Throws an exception if the stack is empty.
+
+\begin{DoxyReturn}{Returns}
+Const reference to the top element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the stack is empty. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Stack.\+h\end{DoxyCompactItemize}
